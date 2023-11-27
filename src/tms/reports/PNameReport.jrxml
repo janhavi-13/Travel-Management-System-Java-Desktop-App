@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="555bd381-c4b1-467b-8231-eb1b8c5da5f6">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select *  from  addPackage where pName="Hampi";]]>
+	</queryString>
+	<field name="SrNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="duration" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="attractions" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="meals" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tMode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lTo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ddate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bCapacity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imagePath" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="129" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="-12" y="0" width="578" height="79" uuid="37854c92-434d-4db0-a88f-46decf86871b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="24" width="485" height="32" uuid="76bb0797-d060-4ede-a719-bb5759a33bf8"/>
+				<textElement>
+					<font fontName="Georgia" size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pName} ]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="452">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="452" uuid="96c797db-14e1-4007-8a0d-c2153ecf1f2d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="16" y="24" width="74" height="20" uuid="7ee38f13-cd62-450c-9224-b909812b55bd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Package ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="24" width="100" height="20" uuid="702aa603-2644-44d0-8aa2-6af12ea8aa16"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SrNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="62" width="57" height="20" uuid="33d5592b-0844-48bd-86aa-b0f127923236"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="89" y="62" width="100" height="20" uuid="25789bdf-cfca-45ec-8bed-279ecf1718a9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="62" width="30" height="20" uuid="45a60453-b299-4b41-a5a0-d1d544681070"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="281" y="62" width="100" height="20" uuid="5d748cf0-f4d2-48f4-8d47-445c7881c5ed"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="101" width="74" height="20" uuid="3838fbeb-01c5-4087-b5cf-43f4a0b9fd6e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Duration :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="101" width="100" height="20" uuid="a37b8cf3-8728-4b57-a831-ded5b9feed23"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duration}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="143" width="74" height="20" uuid="98e75db3-992d-40d1-b6fd-a5f9be4eaaef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Activities :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="89" y="143" width="466" height="104" uuid="82e82315-ed26-46e1-ba59-6af776981db9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{attractions}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="268" width="100" height="20" uuid="fb9a8f49-f681-4415-a64d-2406d8400342"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transportation  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="268" width="92" height="20" uuid="d4313b7d-acb3-459a-92cc-f084feb8ccfb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="138" y="268" width="52" height="20" uuid="3bb263b7-d907-456c-b9b3-121166684ec9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="364" y="268" width="82" height="20" uuid="9ec17389-492a-482c-8ac1-17962ddf0165"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tMode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="313" y="268" width="51" height="20" uuid="c7044ce4-14e1-4493-aec9-ac5a49ee666e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="306" width="57" height="20" uuid="694bf024-dd61-4408-9dc3-49d8d93cac03"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meals :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="306" width="117" height="20" uuid="151eb6b3-713c-4e79-94a7-c4c248010751"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{meals}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="349" width="110" height="20" uuid="33b139e9-e61f-4890-954d-100381d29df7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departure Date :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="126" y="349" width="100" height="20" uuid="45cdf459-8611-41dd-b35c-85f12d92e179"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ddate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="388" width="47" height="20" uuid="22878b00-dcf6-4c46-bfcc-b3fd91663f49"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="388" width="142" height="20" uuid="cddfc479-0e2f-4ed6-894a-7b59f1632fdb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="426" width="123" height="20" uuid="9043864d-9a12-4f47-8649-713911f0f87b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Capacity :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="426" width="100" height="20" uuid="07569846-f48b-43e2-8ade-6ea2c23417ea"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bCapacity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be1cee77-8ea7-42c2-8711-199d8775d327">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from bCapacity;]]>
+	</queryString>
+	<field name="pname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bCapacity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="available" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ddate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="22" width="173" height="29" uuid="3685f4de-a11b-4b60-83fe-e9a8ae9812c2"/>
+				<textElement>
+					<font fontName="Georgia" size="24"/>
+				</textElement>
+				<text><![CDATA[Package  Report ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="291" height="20" uuid="7cece60b-efbc-42fc-8d5e-f03e7ef5f20d"/>
+				<textElement>
+					<font fontName="Georgia" size="14"/>
+				</textElement>
+				<text><![CDATA[Package  Booking  Capacity  and  Availability :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="30" uuid="fe5ea680-066f-42d9-b4be-295b7de7a2a0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="10" width="100" height="20" uuid="a8fc2c1f-cae6-4196-9dc4-4110dbf7dab6"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Package Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="10" width="118" height="20" uuid="3c56f90e-e593-42be-990b-ab7b2b5146f3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Capacity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="10" width="100" height="20" uuid="a4c23169-2776-43ce-be25-4017b9b46c2a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Now  Available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="10" width="100" height="20" uuid="ff67cfae-d209-4aac-8471-f1b5416f2ed6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Departure Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="33" uuid="3d889e3c-d64e-4424-8224-34bf34451252"/>
+			</rectangle>
+			<textField>
+				<reportElement x="22" y="11" width="100" height="20" uuid="012ad983-b3ba-4a15-ad6a-48c7a7213fe2"/>
+				<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="11" width="74" height="20" uuid="35a61efe-0c10-4631-a4dd-d138772da01b"/>
+				<textFieldExpression><![CDATA[$F{bCapacity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="13" width="63" height="20" uuid="49388059-e281-4bcf-9b72-56d5a5a4b1d7"/>
+				<textFieldExpression><![CDATA[$F{available}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="460" y="11" width="79" height="20" uuid="c5cb325f-36f8-4bc8-964a-c05941e839ee"/>
+				<textFieldExpression><![CDATA[$F{ddate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="134" y="-30" width="1" height="63" uuid="385d5963-ae90-4595-8c3a-b90cc37da739"/>
+			</line>
+			<line>
+				<reportElement x="279" y="-30" width="1" height="63" uuid="20a0d480-8fb2-44f1-bce2-14e03b6f509d"/>
+			</line>
+			<line>
+				<reportElement x="414" y="-30" width="1" height="63" uuid="8cd50ec1-a57d-41e1-9617-d10f0a851e7a"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
